@@ -7,23 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07247C3C2505D7E400B5DEF6 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07247C3B2505D7E400B5DEF6 /* DataService.swift */; };
+		07247C3E2505D90800B5DEF6 /* Medicina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07247C3D2505D90800B5DEF6 /* Medicina.swift */; };
+		07247C402505D9D800B5DEF6 /* Enfermedad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07247C3F2505D9D800B5DEF6 /* Enfermedad.swift */; };
+		07247C422505DD3200B5DEF6 /* Aplicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07247C412505DD3200B5DEF6 /* Aplicacion.swift */; };
+		07247C442505DEF300B5DEF6 /* Dosis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07247C432505DEF300B5DEF6 /* Dosis.swift */; };
+		0738D1F4250F062A00513327 /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 0738D1F3250F062A00513327 /* db.json */; };
+		074013AE2510581500E7A2ED /* ParseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074013AD2510581500E7A2ED /* ParseErrors.swift */; };
 		07BD8B1025040FBD008893EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD8B0F25040FBD008893EB /* AppDelegate.swift */; };
 		07BD8B1225040FBD008893EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD8B1125040FBD008893EB /* SceneDelegate.swift */; };
-		07BD8B1425040FBD008893EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD8B1325040FBD008893EB /* ViewController.swift */; };
+		07BD8B1425040FBD008893EB /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD8B1325040FBD008893EB /* MainController.swift */; };
 		07BD8B1725040FBD008893EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD8B1525040FBD008893EB /* Main.storyboard */; };
 		07BD8B1925040FBE008893EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BD8B1825040FBE008893EB /* Assets.xcassets */; };
 		07BD8B1C25040FBE008893EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD8B1A25040FBE008893EB /* LaunchScreen.storyboard */; };
+		07BD8B2825041065008893EB /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD8B2525041064008893EB /* Poppins-Light.ttf */; };
+		07BD8B2925041065008893EB /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD8B2625041065008893EB /* Poppins-SemiBold.ttf */; };
+		07BD8B2A25041065008893EB /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD8B2725041065008893EB /* Poppins-Medium.ttf */; };
+		07BD8B2F250412E4008893EB /* BotomRoundedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD8B2E250412E4008893EB /* BotomRoundedRectangle.swift */; };
+		07BD8B3125047792008893EB /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD8B3025047792008893EB /* RoundedTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07247C3B2505D7E400B5DEF6 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		07247C3D2505D90800B5DEF6 /* Medicina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicina.swift; sourceTree = "<group>"; };
+		07247C3F2505D9D800B5DEF6 /* Enfermedad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enfermedad.swift; sourceTree = "<group>"; };
+		07247C412505DD3200B5DEF6 /* Aplicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aplicacion.swift; sourceTree = "<group>"; };
+		07247C432505DEF300B5DEF6 /* Dosis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dosis.swift; sourceTree = "<group>"; };
+		0738D1F3250F062A00513327 /* db.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db.json; sourceTree = "<group>"; };
+		074013AD2510581500E7A2ED /* ParseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseErrors.swift; sourceTree = "<group>"; };
 		07BD8B0C25040FBD008893EB /* pediaHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pediaHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BD8B0F25040FBD008893EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07BD8B1125040FBD008893EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		07BD8B1325040FBD008893EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		07BD8B1325040FBD008893EB /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		07BD8B1625040FBD008893EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07BD8B1825040FBE008893EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07BD8B1B25040FBE008893EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07BD8B1D25040FBE008893EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07BD8B2525041064008893EB /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		07BD8B2625041065008893EB /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		07BD8B2725041065008893EB /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		07BD8B2E250412E4008893EB /* BotomRoundedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotomRoundedRectangle.swift; sourceTree = "<group>"; };
+		07BD8B3025047792008893EB /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,10 +61,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07247C3A2505D7C300B5DEF6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				07247C3B2505D7E400B5DEF6 /* DataService.swift */,
+				074013AD2510581500E7A2ED /* ParseErrors.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0738D1F2250F061200513327 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				0738D1F3250F062A00513327 /* db.json */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
 		07BD8B0325040FBD008893EB = {
 			isa = PBXGroup;
 			children = (
 				07BD8B0E25040FBD008893EB /* pediaHealth */,
+				07BD8B2325041007008893EB /* Resources */,
 				07BD8B0D25040FBD008893EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,15 +98,65 @@
 		07BD8B0E25040FBD008893EB /* pediaHealth */ = {
 			isa = PBXGroup;
 			children = (
+				07247C3A2505D7C300B5DEF6 /* Utils */,
+				07BD8B2B25041294008893EB /* Model */,
+				07BD8B2C2504129A008893EB /* View */,
+				07BD8B2D250412A2008893EB /* Controller */,
 				07BD8B0F25040FBD008893EB /* AppDelegate.swift */,
 				07BD8B1125040FBD008893EB /* SceneDelegate.swift */,
-				07BD8B1325040FBD008893EB /* ViewController.swift */,
 				07BD8B1525040FBD008893EB /* Main.storyboard */,
 				07BD8B1825040FBE008893EB /* Assets.xcassets */,
 				07BD8B1A25040FBE008893EB /* LaunchScreen.storyboard */,
 				07BD8B1D25040FBE008893EB /* Info.plist */,
 			);
 			path = pediaHealth;
+			sourceTree = "<group>";
+		};
+		07BD8B2325041007008893EB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0738D1F2250F061200513327 /* DB */,
+				07BD8B2425041043008893EB /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		07BD8B2425041043008893EB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				07BD8B2525041064008893EB /* Poppins-Light.ttf */,
+				07BD8B2725041065008893EB /* Poppins-Medium.ttf */,
+				07BD8B2625041065008893EB /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		07BD8B2B25041294008893EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07247C3D2505D90800B5DEF6 /* Medicina.swift */,
+				07247C412505DD3200B5DEF6 /* Aplicacion.swift */,
+				07247C3F2505D9D800B5DEF6 /* Enfermedad.swift */,
+				07247C432505DEF300B5DEF6 /* Dosis.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		07BD8B2C2504129A008893EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07BD8B2E250412E4008893EB /* BotomRoundedRectangle.swift */,
+				07BD8B3025047792008893EB /* RoundedTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		07BD8B2D250412A2008893EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				07BD8B1325040FBD008893EB /* MainController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +217,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0738D1F4250F062A00513327 /* db.json in Resources */,
+				07BD8B2925041065008893EB /* Poppins-SemiBold.ttf in Resources */,
 				07BD8B1C25040FBE008893EB /* LaunchScreen.storyboard in Resources */,
 				07BD8B1925040FBE008893EB /* Assets.xcassets in Resources */,
+				07BD8B2A25041065008893EB /* Poppins-Medium.ttf in Resources */,
 				07BD8B1725040FBD008893EB /* Main.storyboard in Resources */,
+				07BD8B2825041065008893EB /* Poppins-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +234,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07BD8B1425040FBD008893EB /* ViewController.swift in Sources */,
+				07BD8B1425040FBD008893EB /* MainController.swift in Sources */,
+				07BD8B2F250412E4008893EB /* BotomRoundedRectangle.swift in Sources */,
 				07BD8B1025040FBD008893EB /* AppDelegate.swift in Sources */,
+				07247C3C2505D7E400B5DEF6 /* DataService.swift in Sources */,
+				07247C442505DEF300B5DEF6 /* Dosis.swift in Sources */,
+				07BD8B3125047792008893EB /* RoundedTextField.swift in Sources */,
 				07BD8B1225040FBD008893EB /* SceneDelegate.swift in Sources */,
+				074013AE2510581500E7A2ED /* ParseErrors.swift in Sources */,
+				07247C402505D9D800B5DEF6 /* Enfermedad.swift in Sources */,
+				07247C422505DD3200B5DEF6 /* Aplicacion.swift in Sources */,
+				07247C3E2505D90800B5DEF6 /* Medicina.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
