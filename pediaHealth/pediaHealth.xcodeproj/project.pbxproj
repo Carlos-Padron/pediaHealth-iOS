@@ -14,6 +14,7 @@
 		07247C442505DEF300B5DEF6 /* Dosis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07247C432505DEF300B5DEF6 /* Dosis.swift */; };
 		0738D1F4250F062A00513327 /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 0738D1F3250F062A00513327 /* db.json */; };
 		074013AE2510581500E7A2ED /* ParseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074013AD2510581500E7A2ED /* ParseErrors.swift */; };
+		07898198251195B00047BAE7 /* MedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07898197251195B00047BAE7 /* MedCell.swift */; };
 		07BD8B1025040FBD008893EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD8B0F25040FBD008893EB /* AppDelegate.swift */; };
 		07BD8B1225040FBD008893EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD8B1125040FBD008893EB /* SceneDelegate.swift */; };
 		07BD8B1425040FBD008893EB /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD8B1325040FBD008893EB /* MainController.swift */; };
@@ -35,6 +36,7 @@
 		07247C432505DEF300B5DEF6 /* Dosis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dosis.swift; sourceTree = "<group>"; };
 		0738D1F3250F062A00513327 /* db.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db.json; sourceTree = "<group>"; };
 		074013AD2510581500E7A2ED /* ParseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseErrors.swift; sourceTree = "<group>"; };
+		07898197251195B00047BAE7 /* MedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedCell.swift; sourceTree = "<group>"; };
 		07BD8B0C25040FBD008893EB /* pediaHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pediaHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BD8B0F25040FBD008893EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07BD8B1125040FBD008893EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,23 @@
 				0738D1F3250F062A00513327 /* db.json */,
 			);
 			path = DB;
+			sourceTree = "<group>";
+		};
+		078981952511955E0047BAE7 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				07BD8B2E250412E4008893EB /* BotomRoundedRectangle.swift */,
+				07BD8B3025047792008893EB /* RoundedTextField.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		07898196251195760047BAE7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				07898197251195B00047BAE7 /* MedCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		07BD8B0325040FBD008893EB = {
@@ -145,8 +164,8 @@
 		07BD8B2C2504129A008893EB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				07BD8B2E250412E4008893EB /* BotomRoundedRectangle.swift */,
-				07BD8B3025047792008893EB /* RoundedTextField.swift */,
+				07898196251195760047BAE7 /* Cell */,
+				078981952511955E0047BAE7 /* Header */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -244,6 +263,7 @@
 				074013AE2510581500E7A2ED /* ParseErrors.swift in Sources */,
 				07247C402505D9D800B5DEF6 /* Enfermedad.swift in Sources */,
 				07247C422505DD3200B5DEF6 /* Aplicacion.swift in Sources */,
+				07898198251195B00047BAE7 /* MedCell.swift in Sources */,
 				07247C3E2505D90800B5DEF6 /* Medicina.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

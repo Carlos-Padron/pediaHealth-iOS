@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -18,14 +18,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainController" customModule="pediaHealth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOq-Ui-3Rf" customClass="BotomRoundedRectangle" customModule="pediaHealth" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="157"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encuentra tu dosis correcta" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4b-tE-HD4">
-                                        <rect key="frame" x="15" y="33" width="180" height="70"/>
+                                        <rect key="frame" x="15" y="33" width="159" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="2Y4-rF-ooz"/>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="xFL-Ag-Tnc"/>
@@ -35,11 +35,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7u9-ZS-NbN">
-                                        <rect key="frame" x="340" y="44.5" width="20" height="18"/>
+                                        <rect key="frame" x="379" y="41.333333333333336" width="20" height="18"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="51I-IR-EZG" customClass="RoundedTextField" customModule="pediaHealth" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="106" width="345" height="42"/>
+                                        <rect key="frame" x="15" y="106" width="384" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="s89-Mv-Yc0"/>
@@ -64,28 +64,97 @@
                                     <constraint firstItem="X4b-tE-HD4" firstAttribute="top" secondItem="rOq-Ui-3Rf" secondAttribute="top" constant="33" id="xfx-9M-FK4"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZaQ-og-dfi">
+                                <rect key="frame" x="25" y="182" width="364" height="680"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <prototypes>
+                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedName" rowHeight="83" id="9hs-Um-TPy" userLabel="MedCell" customClass="MedCell" customModule="pediaHealth" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="364" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9hs-Um-TPy" id="UCo-dh-nUl">
+                                            <rect key="frame" x="0.0" y="0.0" width="364" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axV-fN-fpi" userLabel="Card">
+                                                    <rect key="frame" x="0.0" y="0.0" width="364" height="72"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KcA-oi-TtO" userLabel="Arrow">
+                                                            <rect key="frame" x="325.33333333333331" y="31.333333333333336" width="18.666666666666686" height="10.333333333333336"/>
+                                                            <color key="tintColor" name="DarkGrey"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abacavir" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IT-aQ-G10" userLabel="MedName">
+                                                            <rect key="frame" x="15" y="17" width="86" height="38"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="260" id="YH8-I5-tC3"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="4IT-aQ-G10" secondAttribute="bottom" constant="17" id="Eqk-rs-5xk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="KcA-oi-TtO" secondAttribute="trailing" constant="20" id="HxI-6T-iW2"/>
+                                                        <constraint firstItem="4IT-aQ-G10" firstAttribute="top" secondItem="axV-fN-fpi" secondAttribute="top" constant="17" id="Tm9-e4-U2M"/>
+                                                        <constraint firstItem="4IT-aQ-G10" firstAttribute="leading" secondItem="axV-fN-fpi" secondAttribute="leading" constant="15" id="pEA-dY-gNV"/>
+                                                        <constraint firstItem="KcA-oi-TtO" firstAttribute="centerY" secondItem="4IT-aQ-G10" secondAttribute="centerY" id="qBQ-HG-mPa"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="axV-fN-fpi" secondAttribute="bottom" constant="11" id="HeY-8a-dC5"/>
+                                                <constraint firstItem="axV-fN-fpi" firstAttribute="top" secondItem="UCo-dh-nUl" secondAttribute="top" id="s8e-fM-Cti"/>
+                                                <constraint firstAttribute="trailing" secondItem="axV-fN-fpi" secondAttribute="trailing" id="sJf-VT-n3S"/>
+                                                <constraint firstItem="axV-fN-fpi" firstAttribute="leading" secondItem="UCo-dh-nUl" secondAttribute="leading" id="w8g-Z8-a1e"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="medText" destination="4IT-aQ-G10" id="4Z7-fR-bjx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="rOq-Ui-3Rf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="26V-OY-Xcx"/>
+                            <constraint firstItem="ZaQ-og-dfi" firstAttribute="top" secondItem="rOq-Ui-3Rf" secondAttribute="bottom" constant="25" id="622-aO-UfW"/>
+                            <constraint firstItem="ZaQ-og-dfi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="PDC-3U-B5B"/>
+                            <constraint firstAttribute="trailing" secondItem="ZaQ-og-dfi" secondAttribute="trailing" constant="25" id="PNW-FZ-uHX"/>
                             <constraint firstItem="rOq-Ui-3Rf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="e2R-es-QnO"/>
                             <constraint firstItem="rOq-Ui-3Rf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="n4A-ON-twx"/>
+                            <constraint firstItem="ZaQ-og-dfi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qCp-cZ-z9g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="MainTable" destination="ZaQ-og-dfi" id="D4d-ej-XAG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.40000000000001" y="113.79310344827587"/>
+            <point key="canvasLocation" x="128.98550724637681" y="113.16964285714285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <namedColor name="Background">
+            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="DarkGrey">
             <color red="0.37999999523162842" green="0.37999999523162842" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Header">
             <color red="0.14000000059604645" green="0.61000001430511475" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.0" green="0.47999998927116394" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
