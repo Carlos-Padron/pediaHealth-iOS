@@ -33,7 +33,7 @@ class RoundedTextField: UITextField {
         clipsToBounds         = true
                
         attributedPlaceholder = NSAttributedString(string: "Buscar", attributes:
-            [NSAttributedString.Key.foregroundColor: UIColor(named: "Grey") ?? UIColor(ciColor: .gray)])
+            [NSAttributedString.Key.foregroundColor: UIColor(named: "DarkGrey") ?? UIColor(ciColor: .gray)])
     }
     
     func setUpImage(){

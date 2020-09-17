@@ -12,6 +12,7 @@ class MedCell: UITableViewCell {
     
     //Outlets
     @IBOutlet weak var medText: UILabel!
+    @IBOutlet weak var uso: UILabel!
     
 
     override func awakeFromNib() {
@@ -25,8 +26,9 @@ class MedCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setMedName(name: String){
+    func setMedName(name: String, uso: String){
         self.medText.text = name
+        self.uso.text     = uso
     }
 
 }

@@ -12,7 +12,7 @@ class BotomRoundedRectangle: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-    setUpVIew()
+        setUpVIew()
     }
     
     required init?(coder: NSCoder) {

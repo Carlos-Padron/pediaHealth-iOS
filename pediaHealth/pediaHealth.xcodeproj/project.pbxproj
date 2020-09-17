@@ -12,6 +12,7 @@
 		07247C402505D9D800B5DEF6 /* Enfermedad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07247C3F2505D9D800B5DEF6 /* Enfermedad.swift */; };
 		07247C422505DD3200B5DEF6 /* Aplicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07247C412505DD3200B5DEF6 /* Aplicacion.swift */; };
 		07247C442505DEF300B5DEF6 /* Dosis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07247C432505DEF300B5DEF6 /* Dosis.swift */; };
+		073165D0251279EA009A4459 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073165CF251279EA009A4459 /* Card.swift */; };
 		0738D1F4250F062A00513327 /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 0738D1F3250F062A00513327 /* db.json */; };
 		074013AE2510581500E7A2ED /* ParseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074013AD2510581500E7A2ED /* ParseErrors.swift */; };
 		07898198251195B00047BAE7 /* MedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07898197251195B00047BAE7 /* MedCell.swift */; };
@@ -34,6 +35,7 @@
 		07247C3F2505D9D800B5DEF6 /* Enfermedad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enfermedad.swift; sourceTree = "<group>"; };
 		07247C412505DD3200B5DEF6 /* Aplicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aplicacion.swift; sourceTree = "<group>"; };
 		07247C432505DEF300B5DEF6 /* Dosis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dosis.swift; sourceTree = "<group>"; };
+		073165CF251279EA009A4459 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		0738D1F3250F062A00513327 /* db.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db.json; sourceTree = "<group>"; };
 		074013AD2510581500E7A2ED /* ParseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseErrors.swift; sourceTree = "<group>"; };
 		07898197251195B00047BAE7 /* MedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedCell.swift; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 				074013AD2510581500E7A2ED /* ParseErrors.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		073165CE25127875009A4459 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				073165CF251279EA009A4459 /* Card.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 		0738D1F2250F061200513327 /* DB */ = {
@@ -154,8 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				07247C3D2505D90800B5DEF6 /* Medicina.swift */,
-				07247C412505DD3200B5DEF6 /* Aplicacion.swift */,
 				07247C3F2505D9D800B5DEF6 /* Enfermedad.swift */,
+				07247C412505DD3200B5DEF6 /* Aplicacion.swift */,
 				07247C432505DEF300B5DEF6 /* Dosis.swift */,
 			);
 			path = Model;
@@ -164,6 +174,7 @@
 		07BD8B2C2504129A008893EB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				073165CE25127875009A4459 /* Card */,
 				07898196251195760047BAE7 /* Cell */,
 				078981952511955E0047BAE7 /* Header */,
 			);
@@ -257,6 +268,7 @@
 				07BD8B2F250412E4008893EB /* BotomRoundedRectangle.swift in Sources */,
 				07BD8B1025040FBD008893EB /* AppDelegate.swift in Sources */,
 				07247C3C2505D7E400B5DEF6 /* DataService.swift in Sources */,
+				073165D0251279EA009A4459 /* Card.swift in Sources */,
 				07247C442505DEF300B5DEF6 /* Dosis.swift in Sources */,
 				07BD8B3125047792008893EB /* RoundedTextField.swift in Sources */,
 				07BD8B1225040FBD008893EB /* SceneDelegate.swift in Sources */,

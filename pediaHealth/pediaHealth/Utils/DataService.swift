@@ -68,7 +68,6 @@ class DataService {
                         
                         medicina.append(med)
                         
-                        print(med.nombre)
                         enfermeades = []
                         aplicaciones = []
                         dosis = []

@@ -12,11 +12,13 @@ struct Medicina {
      let nombreCorto: String
      let uso: String
      let enfermedades: [Enfermedad]
+        let expanded: Bool
     
     init(nombre: String, nombreCorto: String, uso: String, enfermedad:  [Enfermedad]) {
         self.nombre         =  nombre
         self.nombreCorto    =  nombreCorto
         self.uso            =  uso
         self.enfermedades   =  enfermedad
+        self.expanded       = false
     }
 }

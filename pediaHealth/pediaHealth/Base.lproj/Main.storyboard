@@ -25,17 +25,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encuentra tu dosis correcta" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4b-tE-HD4">
-                                        <rect key="frame" x="15" y="33" width="159" height="70"/>
+                                        <rect key="frame" x="15" y="33" width="200" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="2Y4-rF-ooz"/>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="xFL-Ag-Tnc"/>
+                                            <constraint firstAttribute="width" constant="200" id="xFL-Ag-Tnc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7u9-ZS-NbN">
-                                        <rect key="frame" x="379" y="41.333333333333336" width="20" height="18"/>
+                                        <rect key="frame" x="379" y="44" width="20" height="18"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="51I-IR-EZG" customClass="RoundedTextField" customModule="pediaHealth" customModuleProvider="target">
@@ -68,53 +68,61 @@
                                 <rect key="frame" x="25" y="182" width="364" height="680"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <prototypes>
-                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedName" rowHeight="83" id="9hs-Um-TPy" userLabel="MedCell" customClass="MedCell" customModule="pediaHealth" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="364" height="83"/>
+                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedName" rowHeight="101" id="9hs-Um-TPy" userLabel="MedCell" customClass="MedCell" customModule="pediaHealth" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="364" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9hs-Um-TPy" id="UCo-dh-nUl">
-                                            <rect key="frame" x="0.0" y="0.0" width="364" height="83"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="364" height="101"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axV-fN-fpi" userLabel="Card">
-                                                    <rect key="frame" x="0.0" y="0.0" width="364" height="72"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axV-fN-fpi" userLabel="Card" customClass="Card" customModule="pediaHealth" customModuleProvider="target">
+                                                    <rect key="frame" x="3" y="2" width="358" height="90"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KcA-oi-TtO" userLabel="Arrow">
-                                                            <rect key="frame" x="325.33333333333331" y="31.333333333333336" width="18.666666666666686" height="10.333333333333336"/>
+                                                            <rect key="frame" x="319.33333333333331" y="22.666666666666664" width="18.666666666666686" height="10.333333333333336"/>
                                                             <color key="tintColor" name="DarkGrey"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abacavir" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IT-aQ-G10" userLabel="MedName">
-                                                            <rect key="frame" x="15" y="17" width="86" height="38"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="260" id="YH8-I5-tC3"/>
-                                                            </constraints>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Aceponato de metilpred" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IT-aQ-G10" userLabel="MedName">
+                                                            <rect key="frame" x="15" y="12" width="284.33333333333331" height="31"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
                                                             <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicamento para el obo y oplo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvI-DT-MhY" userLabel="Description">
+                                                            <rect key="frame" x="15" y="53" width="278.66666666666669" height="24"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
+                                                            <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="4IT-aQ-G10" secondAttribute="bottom" constant="17" id="Eqk-rs-5xk"/>
-                                                        <constraint firstAttribute="trailing" secondItem="KcA-oi-TtO" secondAttribute="trailing" constant="20" id="HxI-6T-iW2"/>
-                                                        <constraint firstItem="4IT-aQ-G10" firstAttribute="top" secondItem="axV-fN-fpi" secondAttribute="top" constant="17" id="Tm9-e4-U2M"/>
-                                                        <constraint firstItem="4IT-aQ-G10" firstAttribute="leading" secondItem="axV-fN-fpi" secondAttribute="leading" constant="15" id="pEA-dY-gNV"/>
-                                                        <constraint firstItem="KcA-oi-TtO" firstAttribute="centerY" secondItem="4IT-aQ-G10" secondAttribute="centerY" id="qBQ-HG-mPa"/>
+                                                        <constraint firstItem="4IT-aQ-G10" firstAttribute="top" secondItem="axV-fN-fpi" secondAttribute="top" constant="12" id="HuK-ol-IjX"/>
+                                                        <constraint firstItem="KcA-oi-TtO" firstAttribute="centerY" secondItem="4IT-aQ-G10" secondAttribute="centerY" id="Lhn-It-1Ym"/>
+                                                        <constraint firstAttribute="trailing" secondItem="gvI-DT-MhY" secondAttribute="trailing" constant="64.329999999999998" id="Rxc-Pc-x4z"/>
+                                                        <constraint firstItem="gvI-DT-MhY" firstAttribute="top" secondItem="4IT-aQ-G10" secondAttribute="bottom" constant="10" id="X9m-jc-UFu"/>
+                                                        <constraint firstAttribute="bottom" secondItem="gvI-DT-MhY" secondAttribute="bottom" constant="13" id="afM-wE-eKa"/>
+                                                        <constraint firstItem="4IT-aQ-G10" firstAttribute="leading" secondItem="axV-fN-fpi" secondAttribute="leading" constant="15" id="pK4-Uv-YGE"/>
+                                                        <constraint firstItem="KcA-oi-TtO" firstAttribute="leading" secondItem="4IT-aQ-G10" secondAttribute="trailing" constant="20" id="ppt-H3-o3c"/>
+                                                        <constraint firstItem="gvI-DT-MhY" firstAttribute="leading" secondItem="4IT-aQ-G10" secondAttribute="leading" id="y7p-Wi-sLd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="KcA-oi-TtO" secondAttribute="trailing" constant="20" id="zTq-K5-DIH"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="axV-fN-fpi" secondAttribute="bottom" constant="11" id="HeY-8a-dC5"/>
-                                                <constraint firstItem="axV-fN-fpi" firstAttribute="top" secondItem="UCo-dh-nUl" secondAttribute="top" id="s8e-fM-Cti"/>
-                                                <constraint firstAttribute="trailing" secondItem="axV-fN-fpi" secondAttribute="trailing" id="sJf-VT-n3S"/>
-                                                <constraint firstItem="axV-fN-fpi" firstAttribute="leading" secondItem="UCo-dh-nUl" secondAttribute="leading" id="w8g-Z8-a1e"/>
+                                                <constraint firstAttribute="bottom" secondItem="axV-fN-fpi" secondAttribute="bottom" constant="9" id="HeY-8a-dC5"/>
+                                                <constraint firstItem="axV-fN-fpi" firstAttribute="top" secondItem="UCo-dh-nUl" secondAttribute="top" constant="2" id="s8e-fM-Cti"/>
+                                                <constraint firstAttribute="trailing" secondItem="axV-fN-fpi" secondAttribute="trailing" constant="3" id="sJf-VT-n3S"/>
+                                                <constraint firstItem="axV-fN-fpi" firstAttribute="leading" secondItem="UCo-dh-nUl" secondAttribute="leading" constant="3" id="w8g-Z8-a1e"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="medText" destination="4IT-aQ-G10" id="4Z7-fR-bjx"/>
+                                            <outlet property="uso" destination="gvI-DT-MhY" id="bmK-Ci-bjg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
