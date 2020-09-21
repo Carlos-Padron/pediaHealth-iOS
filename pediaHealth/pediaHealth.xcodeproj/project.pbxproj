@@ -68,8 +68,7 @@
 		07247C3A2505D7C300B5DEF6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				07247C3B2505D7E400B5DEF6 /* DataService.swift */,
-				074013AD2510581500E7A2ED /* ParseErrors.swift */,
+				07BD4DE32513FB7F00694B82 /* LocalFile */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -105,6 +104,15 @@
 				07898197251195B00047BAE7 /* MedCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		07BD4DE32513FB7F00694B82 /* LocalFile */ = {
+			isa = PBXGroup;
+			children = (
+				07247C3B2505D7E400B5DEF6 /* DataService.swift */,
+				074013AD2510581500E7A2ED /* ParseErrors.swift */,
+			);
+			path = LocalFile;
 			sourceTree = "<group>";
 		};
 		07BD8B0325040FBD008893EB = {
@@ -216,7 +224,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Carlos Padrón";
 				TargetAttributes = {
 					07BD8B0B25040FBD008893EB = {
@@ -328,6 +336,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -388,6 +397,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

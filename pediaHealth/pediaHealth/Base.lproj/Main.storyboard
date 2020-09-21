@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,11 +19,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainController" customModule="pediaHealth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOq-Ui-3Rf" customClass="BotomRoundedRectangle" customModule="pediaHealth" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="157"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encuentra tu dosis correcta" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4b-tE-HD4">
                                         <rect key="frame" x="15" y="33" width="200" height="70"/>
@@ -35,11 +36,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7u9-ZS-NbN">
-                                        <rect key="frame" x="379" y="44" width="20" height="18"/>
+                                        <rect key="frame" x="340" y="42" width="20" height="18"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="51I-IR-EZG" customClass="RoundedTextField" customModule="pediaHealth" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="106" width="384" height="42"/>
+                                        <rect key="frame" x="15" y="106" width="345" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="s89-Mv-Yc0"/>
@@ -65,31 +66,31 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZaQ-og-dfi">
-                                <rect key="frame" x="25" y="182" width="364" height="680"/>
+                                <rect key="frame" x="25" y="182" width="325" height="485"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedName" rowHeight="101" id="9hs-Um-TPy" userLabel="MedCell" customClass="MedCell" customModule="pediaHealth" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="364" height="101"/>
+                                        <rect key="frame" x="0.0" y="28" width="325" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9hs-Um-TPy" id="UCo-dh-nUl">
-                                            <rect key="frame" x="0.0" y="0.0" width="364" height="101"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="325" height="101"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axV-fN-fpi" userLabel="Card" customClass="Card" customModule="pediaHealth" customModuleProvider="target">
-                                                    <rect key="frame" x="3" y="2" width="358" height="90"/>
+                                                    <rect key="frame" x="3" y="2" width="319" height="90"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KcA-oi-TtO" userLabel="Arrow">
-                                                            <rect key="frame" x="319.33333333333331" y="22.666666666666664" width="18.666666666666686" height="10.333333333333336"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KcA-oi-TtO" userLabel="Arrow">
+                                                            <rect key="frame" x="286.5" y="17" width="12.5" height="16.5"/>
                                                             <color key="tintColor" name="DarkGrey"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Aceponato de metilpred" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IT-aQ-G10" userLabel="MedName">
-                                                            <rect key="frame" x="15" y="12" width="284.33333333333331" height="31"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Obo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IT-aQ-G10" userLabel="MedName">
+                                                            <rect key="frame" x="15" y="12" width="251.5" height="26"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicamento para el obo y oplo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvI-DT-MhY" userLabel="Description">
-                                                            <rect key="frame" x="15" y="53" width="278.66666666666669" height="24"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicamento para el obo y " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvI-DT-MhY" userLabel="Description">
+                                                            <rect key="frame" x="15" y="48" width="239.5" height="20"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -98,14 +99,13 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstItem="gvI-DT-MhY" firstAttribute="leading" secondItem="4IT-aQ-G10" secondAttribute="leading" id="0PO-uH-B4n"/>
                                                         <constraint firstItem="4IT-aQ-G10" firstAttribute="top" secondItem="axV-fN-fpi" secondAttribute="top" constant="12" id="HuK-ol-IjX"/>
                                                         <constraint firstItem="KcA-oi-TtO" firstAttribute="centerY" secondItem="4IT-aQ-G10" secondAttribute="centerY" id="Lhn-It-1Ym"/>
                                                         <constraint firstAttribute="trailing" secondItem="gvI-DT-MhY" secondAttribute="trailing" constant="64.329999999999998" id="Rxc-Pc-x4z"/>
                                                         <constraint firstItem="gvI-DT-MhY" firstAttribute="top" secondItem="4IT-aQ-G10" secondAttribute="bottom" constant="10" id="X9m-jc-UFu"/>
-                                                        <constraint firstAttribute="bottom" secondItem="gvI-DT-MhY" secondAttribute="bottom" constant="13" id="afM-wE-eKa"/>
                                                         <constraint firstItem="4IT-aQ-G10" firstAttribute="leading" secondItem="axV-fN-fpi" secondAttribute="leading" constant="15" id="pK4-Uv-YGE"/>
                                                         <constraint firstItem="KcA-oi-TtO" firstAttribute="leading" secondItem="4IT-aQ-G10" secondAttribute="trailing" constant="20" id="ppt-H3-o3c"/>
-                                                        <constraint firstItem="gvI-DT-MhY" firstAttribute="leading" secondItem="4IT-aQ-G10" secondAttribute="leading" id="y7p-Wi-sLd"/>
                                                         <constraint firstAttribute="trailing" secondItem="KcA-oi-TtO" secondAttribute="trailing" constant="20" id="zTq-K5-DIH"/>
                                                     </constraints>
                                                 </view>
@@ -121,6 +121,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="arrowIcon" destination="KcA-oi-TtO" id="D9U-Lj-LZR"/>
                                             <outlet property="medText" destination="4IT-aQ-G10" id="4Z7-fR-bjx"/>
                                             <outlet property="uso" destination="gvI-DT-MhY" id="bmK-Ci-bjg"/>
                                         </connections>
@@ -128,6 +129,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="rOq-Ui-3Rf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="26V-OY-Xcx"/>
@@ -138,7 +140,6 @@
                             <constraint firstItem="rOq-Ui-3Rf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="n4A-ON-twx"/>
                             <constraint firstItem="ZaQ-og-dfi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qCp-cZ-z9g"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="MainTable" destination="ZaQ-og-dfi" id="D4d-ej-XAG"/>
@@ -149,8 +150,13 @@
             <point key="canvasLocation" x="128.98550724637681" y="113.16964285714285"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="51I-IR-EZG">
+            <size key="intrinsicContentSize" width="4" height="18.5"/>
+        </designable>
+    </designables>
     <resources>
-        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <namedColor name="Background">
             <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

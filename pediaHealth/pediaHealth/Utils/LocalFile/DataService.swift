@@ -75,6 +75,7 @@ class DataService {
                         
                     }
                     self.medCatalog = medicina
+                    print("termina parseo")
                     completion(.success(self.medCatalog))
                 }
             }catch{
