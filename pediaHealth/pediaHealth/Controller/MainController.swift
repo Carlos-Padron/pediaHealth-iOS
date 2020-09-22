@@ -13,7 +13,6 @@ class MainController: UIViewController{
     //Variables
     var selectedMainIndex: IndexPath?
     var previousSelectedMainIndex: IndexPath?
-    var selectedSecondaryIndex: IndexPath?
     var collapsedCellHeight: [Int: CGFloat]  = [:]
     var expandedCellHeight: [Int: CGFloat]   = [:]
     var cellBool: [Int: Bool]                = [:]
@@ -22,6 +21,7 @@ class MainController: UIViewController{
     
     //Outlets
     @IBOutlet weak var MainTable: UITableView!
+
     
 
     override func viewDidLoad() {
@@ -34,17 +34,19 @@ class MainController: UIViewController{
         DataService.instance.createMedList { (res) in
             switch res {
             case .success(let medArray):
-                self.medCatalog = medArray
+               
+                let sortedArray:[Medicina] = medArray.sorted { (a: Medicina, b: Medicina) -> Bool in
+                    return    a.nombre.folding(options: .diacriticInsensitive, locale: .none)
+                           <  b.nombre.folding(options: .diacriticInsensitive, locale: .none)
+                }
+                self.medCatalog = sortedArray
             case .failure(let error):
                 print(error)
             }
         }
     }
     
-    func mainTableViewSetUp(){
-        self.MainTable.delegate = self
-        self.MainTable.dataSource = self
-    }
+   
     
     
 }
@@ -52,6 +54,10 @@ class MainController: UIViewController{
 //MARK: - TableView Config 
 extension MainController:  UITableViewDataSource, UITableViewDelegate{
     
+    func mainTableViewSetUp(){
+        self.MainTable.delegate = self
+        self.MainTable.dataSource = self
+    }
     
     //# Rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,7 +79,7 @@ extension MainController:  UITableViewDataSource, UITableViewDelegate{
                 cell.selectedBackgroundView     =  backgroundView
                                 
                 cell.setMedName(name: self.medCatalog[indexPath.row].nombre, uso: self.medCatalog[indexPath.row].uso )
-               
+                //cell.setEnfmermedadArray(array: self.medCatalog[indexPath.row].enfermedades)
                 
                cell.layoutIfNeeded()
                cell.layoutSubviews()
@@ -100,6 +106,11 @@ extension MainController:  UITableViewDataSource, UITableViewDelegate{
 
         if self.cellBool[indexPath.row] != nil {
             if self.cellBool[indexPath.row]!{
+                if let indexP = self.selectedMainIndex {
+                    if indexP.row == indexPath.row {
+                        return self.expandedCellHeight[indexPath.row]!
+                    }
+                }
                 return self.collapsedCellHeight[indexPath.row]!
             }
         }
@@ -115,12 +126,21 @@ extension MainController:  UITableViewDataSource, UITableViewDelegate{
         cell.rotateIcon(open: true)
     
         if let indexP = self.previousSelectedMainIndex{
-            let cell = tableView.cellForRow(at: indexP) as! MedCell
-            cell.rotateIcon(open: false)
+            if indexP.row == self.selectedMainIndex!.row {
+                
+                let cell = tableView.cellForRow(at: indexP) as! MedCell
+                cell.rotateIcon(open: false)
+                self.selectedMainIndex          =  nil
+                self.previousSelectedMainIndex  =  nil
+            }else{
+                let cell = tableView.cellForRow(at: indexP) as! MedCell
+                cell.rotateIcon(open: false)
+            }
+            
         }
         
-        //cell.rotateIcon(open: true)
-        
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
 
 }

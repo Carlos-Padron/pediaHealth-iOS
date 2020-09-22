@@ -36,7 +36,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7u9-ZS-NbN">
-                                        <rect key="frame" x="340" y="42" width="20" height="18"/>
+                                        <rect key="frame" x="340" y="44.5" width="20" height="18"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="51I-IR-EZG" customClass="RoundedTextField" customModule="pediaHealth" customModuleProvider="target">
@@ -69,28 +69,28 @@
                                 <rect key="frame" x="25" y="182" width="325" height="485"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <prototypes>
-                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedName" rowHeight="101" id="9hs-Um-TPy" userLabel="MedCell" customClass="MedCell" customModule="pediaHealth" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="325" height="101"/>
+                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedName" rowHeight="250" id="9hs-Um-TPy" userLabel="MedCell" customClass="MedCell" customModule="pediaHealth" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="325" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9hs-Um-TPy" id="UCo-dh-nUl">
-                                            <rect key="frame" x="0.0" y="0.0" width="325" height="101"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="325" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axV-fN-fpi" userLabel="Card" customClass="Card" customModule="pediaHealth" customModuleProvider="target">
-                                                    <rect key="frame" x="3" y="2" width="319" height="90"/>
+                                                    <rect key="frame" x="3" y="2" width="319" height="239"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KcA-oi-TtO" userLabel="Arrow">
-                                                            <rect key="frame" x="286.5" y="17" width="12.5" height="16.5"/>
+                                                            <rect key="frame" x="286.5" y="19.5" width="12.5" height="16.5"/>
                                                             <color key="tintColor" name="DarkGrey"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Obo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IT-aQ-G10" userLabel="MedName">
-                                                            <rect key="frame" x="15" y="12" width="251.5" height="26"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Med" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IT-aQ-G10" userLabel="MedName">
+                                                            <rect key="frame" x="15" y="12" width="251.5" height="31"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicamento para el obo y " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvI-DT-MhY" userLabel="Description">
-                                                            <rect key="frame" x="15" y="48" width="239.5" height="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicamento para el med " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvI-DT-MhY" userLabel="Description">
+                                                            <rect key="frame" x="15" y="53" width="239.5" height="24"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -147,12 +147,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128.98550724637681" y="113.16964285714285"/>
+            <point key="canvasLocation" x="128.80000000000001" y="112.89355322338831"/>
         </scene>
     </scenes>
     <designables>
         <designable name="51I-IR-EZG">
-            <size key="intrinsicContentSize" width="4" height="18.5"/>
+            <size key="intrinsicContentSize" width="49" height="18.5"/>
         </designable>
     </designables>
     <resources>
