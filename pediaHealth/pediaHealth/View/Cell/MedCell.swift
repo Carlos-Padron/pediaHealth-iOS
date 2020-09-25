@@ -49,6 +49,10 @@ class MedCell: UITableViewCell {
         
         self.illness = array
         self.mainTableIndex = index
+        
+        let tableHeight:CGFloat = CGFloat((self.illness.count * 48) * 2)
+        
+        self.SecondTable.heightAnchor.constraint(equalToConstant: tableHeight).isActive = true
         self.SecondTable.reloadData()
         
     }
@@ -62,7 +66,7 @@ class MedCell: UITableViewCell {
     func collapsedCellHeight()-> CGFloat{
         
         let cellTextHeight: CGFloat       =  self.medText.bounds.height
-        let collapsedHeight: CGFloat      =  cellTextHeight          +  self.textTopAnchor      +  self.TextBottomAnchor +                                                                 self.cardBottomAnchor   +  self.cardTopAnchor      +  5
+        let collapsedHeight: CGFloat      =  cellTextHeight          +  self.textTopAnchor      +  self.TextBottomAnchor +                                                                          self.cardBottomAnchor   +  self.cardTopAnchor      +  5
 
         return collapsedHeight
     }
@@ -72,9 +76,10 @@ class MedCell: UITableViewCell {
         
         let cellTextHeight: CGFloat       =  self.medText.bounds.height
         let cellUsageTextHeight: CGFloat  =  self.uso.bounds.height
-        //let secondTableHeight: CGFloat    =  self.SecondTable.bounds.height
+        let secondTableHeight: CGFloat    =  self.SecondTable.bounds.height
         
-        let expandedHeight: CGFloat       =  cellTextHeight         +  self.textTopAnchor      + self.TextBottomAnchor +                                                                   self.cardBottomAnchor  +  self.cardTopAnchor      + cellUsageTextHeight   + 10+100
+        let expandedHeight: CGFloat       =  cellTextHeight         +  self.textTopAnchor      + self.TextBottomAnchor +                                                                            self.cardBottomAnchor  +  self.cardTopAnchor      + cellUsageTextHeight   +
+                                             10                     +  secondTableHeight
         return expandedHeight
     }
     
@@ -93,7 +98,6 @@ class MedCell: UITableViewCell {
         }
     }
 
-    //weak var cellDelegate: UITableViewDelegate?
     
 }
 
@@ -103,8 +107,6 @@ extension MedCell: UITableViewDelegate, UITableViewDataSource{
     
     
     func updateSecondTableView(){
-        SecondTable.rowHeight = UITableView.automaticDimension
-        SecondTable.estimatedRowHeight = 44
         self.SecondTable.reloadData()
     }
     
@@ -112,7 +114,7 @@ extension MedCell: UITableViewDelegate, UITableViewDataSource{
     func secondTableViewSetUp(){
         self.SecondTable.delegate = self
         self.SecondTable.dataSource = self
-        self.SecondTable.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -130,10 +132,9 @@ extension MedCell: UITableViewDelegate, UITableViewDataSource{
                 cell.updateConstraintsIfNeeded()
                 
                 self.secondaryCollapsedCellHeight[indexPath.row] = cell.getCellHeight()
+                self.cellBool[indexPath.row]                     =  true
                 return cell
             }
-            
-            print("otro")
         }
         return  UITableViewCell()
     }
@@ -147,11 +148,7 @@ extension MedCell: UITableViewDelegate, UITableViewDataSource{
                 return self.secondaryCollapsedCellHeight[indexPath.row]!
             }
         }
-        return 85
-
-        //return  UITableView.automaticDimension
-
-
+        return 45
 
     }
     

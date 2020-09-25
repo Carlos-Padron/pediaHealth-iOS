@@ -194,7 +194,7 @@
     </scenes>
     <designables>
         <designable name="51I-IR-EZG">
-            <size key="intrinsicContentSize" width="4" height="18.5"/>
+            <size key="intrinsicContentSize" width="49" height="18.5"/>
         </designable>
     </designables>
     <resources>
