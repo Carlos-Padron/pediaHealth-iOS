@@ -10,7 +10,10 @@ import UIKit
 
 class IllCell: UITableViewCell {
     
+    //Varables
+    let topBottomAnchor: CGFloat = 16.0
     
+    //Outlets
     @IBOutlet weak var enfermedadText: UILabel!
     @IBOutlet weak var arrowIcon: UIImageView!
     
@@ -27,6 +30,12 @@ class IllCell: UITableViewCell {
     
     func setUpCell(enfermedad: String){
         self.enfermedadText.text = enfermedad
+    }
+    
+    func getCellHeight()->CGFloat{
+        let cellTextHeight: CGFloat       =  self.enfermedadText.bounds.height
+        
+        return cellTextHeight + self.topBottomAnchor
     }
 
 }

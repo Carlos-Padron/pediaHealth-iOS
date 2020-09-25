@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -36,7 +37,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7u9-ZS-NbN">
-                                        <rect key="frame" x="340" y="44.5" width="20" height="18"/>
+                                        <rect key="frame" x="340" y="42" width="20" height="18"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="51I-IR-EZG" customClass="RoundedTextField" customModule="pediaHealth" customModuleProvider="target">
@@ -80,26 +81,66 @@
                                                     <rect key="frame" x="3" y="2" width="319" height="239"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KcA-oi-TtO" userLabel="Arrow">
-                                                            <rect key="frame" x="286.5" y="19.5" width="12.5" height="16.5"/>
+                                                            <rect key="frame" x="286.5" y="17" width="12.5" height="16.5"/>
                                                             <color key="tintColor" name="DarkGrey"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Med" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IT-aQ-G10" userLabel="MedName">
-                                                            <rect key="frame" x="15" y="12" width="251.5" height="31"/>
+                                                            <rect key="frame" x="15" y="12" width="251.5" height="26"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicamento para el med " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvI-DT-MhY" userLabel="Description">
-                                                            <rect key="frame" x="15" y="53" width="239.5" height="24"/>
+                                                            <rect key="frame" x="15" y="48" width="239.5" height="20"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pTT-wy-3Oy">
+                                                            <rect key="frame" x="15" y="92" width="284" height="132"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <prototypes>
+                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IllName" rowHeight="98" id="yyf-fO-z6N" customClass="IllCell" customModule="pediaHealth" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="28" width="284" height="98"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yyf-fO-z6N" id="ihG-2Y-bv6">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="284" height="98"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Med" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkj-t8-Nt8" userLabel="MedName">
+                                                                                <rect key="frame" x="10" y="8" width="241.5" height="23.5"/>
+                                                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
+                                                                                <color key="textColor" name="Text"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="F5v-5z-OaG" userLabel="Arrow">
+                                                                                <rect key="frame" x="261.5" y="12" width="12.5" height="16.5"/>
+                                                                                <color key="tintColor" name="DarkGrey"/>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="trailing" secondItem="F5v-5z-OaG" secondAttribute="trailing" constant="10" id="HF3-rK-esy"/>
+                                                                            <constraint firstItem="F5v-5z-OaG" firstAttribute="leading" secondItem="vkj-t8-Nt8" secondAttribute="trailing" constant="10" id="Led-Rw-leP"/>
+                                                                            <constraint firstItem="vkj-t8-Nt8" firstAttribute="leading" secondItem="ihG-2Y-bv6" secondAttribute="leading" constant="10" id="MXB-oQ-gQQ"/>
+                                                                            <constraint firstItem="vkj-t8-Nt8" firstAttribute="top" secondItem="ihG-2Y-bv6" secondAttribute="top" constant="8" id="Y0O-Mt-UgA"/>
+                                                                            <constraint firstItem="F5v-5z-OaG" firstAttribute="centerY" secondItem="vkj-t8-Nt8" secondAttribute="centerY" id="bTz-Vu-AOb"/>
+                                                                        </constraints>
+                                                                    </tableViewCellContentView>
+                                                                    <connections>
+                                                                        <outlet property="arrowIcon" destination="F5v-5z-OaG" id="Xka-z7-dU3"/>
+                                                                        <outlet property="enfermedadText" destination="vkj-t8-Nt8" id="7RK-Ad-4C8"/>
+                                                                    </connections>
+                                                                </tableViewCell>
+                                                            </prototypes>
+                                                        </tableView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstItem="pTT-wy-3Oy" firstAttribute="top" secondItem="gvI-DT-MhY" secondAttribute="bottom" constant="5" id="0Et-mc-JfY"/>
                                                         <constraint firstItem="gvI-DT-MhY" firstAttribute="leading" secondItem="4IT-aQ-G10" secondAttribute="leading" id="0PO-uH-B4n"/>
+                                                        <constraint firstItem="pTT-wy-3Oy" firstAttribute="trailing" secondItem="KcA-oi-TtO" secondAttribute="trailing" id="3pl-j6-9e4"/>
+                                                        <constraint firstItem="pTT-wy-3Oy" firstAttribute="leading" secondItem="4IT-aQ-G10" secondAttribute="leading" id="ANh-dJ-UWe"/>
                                                         <constraint firstItem="4IT-aQ-G10" firstAttribute="top" secondItem="axV-fN-fpi" secondAttribute="top" constant="12" id="HuK-ol-IjX"/>
                                                         <constraint firstItem="KcA-oi-TtO" firstAttribute="centerY" secondItem="4IT-aQ-G10" secondAttribute="centerY" id="Lhn-It-1Ym"/>
                                                         <constraint firstAttribute="trailing" secondItem="gvI-DT-MhY" secondAttribute="trailing" constant="64.329999999999998" id="Rxc-Pc-x4z"/>
@@ -121,6 +162,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="SecondTable" destination="pTT-wy-3Oy" id="UMl-AF-ha3"/>
                                             <outlet property="arrowIcon" destination="KcA-oi-TtO" id="D9U-Lj-LZR"/>
                                             <outlet property="medText" destination="4IT-aQ-G10" id="4Z7-fR-bjx"/>
                                             <outlet property="uso" destination="gvI-DT-MhY" id="bmK-Ci-bjg"/>
@@ -152,7 +194,7 @@
     </scenes>
     <designables>
         <designable name="51I-IR-EZG">
-            <size key="intrinsicContentSize" width="49" height="18.5"/>
+            <size key="intrinsicContentSize" width="4" height="18.5"/>
         </designable>
     </designables>
     <resources>
@@ -170,5 +212,8 @@
         <namedColor name="Text">
             <color red="0.0" green="0.47999998927116394" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
