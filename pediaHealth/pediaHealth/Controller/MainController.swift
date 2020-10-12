@@ -36,20 +36,27 @@ class MainController: UIViewController{
             switch res {
             case .success(let medArray):
                
-                let sortedArray:[Medicina] = medArray.sorted { (a: Medicina, b: Medicina) -> Bool in
-                    return    a.nombre.folding(options: .diacriticInsensitive, locale: .none)
-                           <  b.nombre.folding(options: .diacriticInsensitive, locale: .none)
-                }
+                self.medCatalog = self.sortCatalog(medArray: medArray)
+               
                 for (index, _) in medArray.enumerated() {
                     self.isCellActive[index] = false
                 }
-                self.medCatalog = sortedArray
+                
+            
+                
             case .failure(let error):
                 print(error)
             }
         }
     }
     
+    func sortCatalog(medArray: [Medicina]) -> [Medicina]{
+        let sortedArray:[Medicina] = medArray.sorted { (a: Medicina, b: Medicina) -> Bool in
+            return    a.nombre.folding(options: .diacriticInsensitive, locale: .none)
+                   <  b.nombre.folding(options: .diacriticInsensitive, locale: .none)
+        }
+        return sortedArray
+    }
    
     
     
@@ -75,33 +82,65 @@ extension MainController:  UITableViewDataSource, UITableViewDelegate, UIScrollV
     //Sets Medicine's name
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView === MainTable{
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "MedName") as? MedCell{
-                
-                let backgroundView              =  UIView()
-                backgroundView.backgroundColor  =  UIColor.white.withAlphaComponent(0.0)
-                cell.selectedBackgroundView     =  backgroundView
-                                
-                cell.setMedName(name: self.medCatalog[indexPath.row].nombre, uso: self.medCatalog[indexPath.row].uso , array: self.medCatalog[indexPath.row].enfermedades, index: indexPath.row)
-    
-                cell.layoutIfNeeded()
-                cell.layoutSubviews()
-                cell.setNeedsUpdateConstraints()
-                cell.updateConstraintsIfNeeded()
-                
-                if  self.isCellActive[indexPath.row] == true {
-                    cell.rotateIcon(open: true)
-                }else{
-                    cell.rotateIcon(open: false)
-                }
+           
+            if self.medCatalog[indexPath.row].enfermedades.count > 1 {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "MedCellWithTable") as? MedCellWithTable{
+                    
+                    let backgroundView              =  UIView()
+                    backgroundView.backgroundColor  =  UIColor.white.withAlphaComponent(0.0)
+                    cell.selectedBackgroundView     =  backgroundView
+                                    
+                    cell.setMedName(name: self.medCatalog[indexPath.row].nombre, uso: self.medCatalog[indexPath.row].uso , array: self.medCatalog[indexPath.row].enfermedades, index: indexPath.row)
+        
+                    cell.layoutIfNeeded()
+                    cell.layoutSubviews()
+                    cell.setNeedsUpdateConstraints()
+                    cell.updateConstraintsIfNeeded()
+                    
+                    if  self.isCellActive[indexPath.row] == true {
+                        cell.rotateIcon(open: true)
+                    }else{
+                        cell.rotateIcon(open: false)
+                    }
 
-                
-                self.cellBool[indexPath.row]             =  true
-                self.collapsedCellHeight[indexPath.row]  =  cell.collapsedCellHeight()
-                self.expandedCellHeight[indexPath.row]  =  cell.expandedCellHeight()
-                
-                cell.updateSecondTableView()
-                return cell
+                    
+                    self.cellBool[indexPath.row]             =  true
+                    self.collapsedCellHeight[indexPath.row]  =  cell.collapsedCellHeight()
+                    self.expandedCellHeight[indexPath.row]   =  cell.expandedCellHeight()
+                    
+                    //cell.updateSecondTableView()
+                    return cell
+                }
+            }else{
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "MedCellWithCollection") as? MedCellWithCollection{
+                    
+                    let backgroundView              =  UIView()
+                    backgroundView.backgroundColor  =  UIColor.white.withAlphaComponent(0.0)
+                    cell.selectedBackgroundView     =  backgroundView
+                                    
+                    cell.setMedName(name: self.medCatalog[indexPath.row].nombre, uso: self.medCatalog[indexPath.row].uso , array: self.medCatalog[indexPath.row].enfermedades[0].aplicaciones  , index: indexPath.row)
+        
+                    cell.layoutIfNeeded()
+                    cell.layoutSubviews()
+                    cell.setNeedsUpdateConstraints()
+                    cell.updateConstraintsIfNeeded()
+                    
+                    if  self.isCellActive[indexPath.row] == true {
+                        cell.rotateIcon(open: true)
+                    }else{
+                        cell.rotateIcon(open: false)
+                    }
+
+                    
+                    self.cellBool[indexPath.row]             =  true
+                    self.collapsedCellHeight[indexPath.row]  =  cell.collapsedCellHeight()
+                    self.expandedCellHeight[indexPath.row]   =  cell.expandedCellHeight()
+                    
+                    //cell.updateSecondTableView()
+                    return cell
+                }
             }
+            
         }
         self.cellBool[indexPath.row]             =   false
         self.collapsedCellHeight[indexPath.row]  =   0.0
@@ -132,24 +171,73 @@ extension MainController:  UITableViewDataSource, UITableViewDelegate, UIScrollV
         self.previousSelectedMainIndex = self.selectedMainIndex
         self.selectedMainIndex         = indexPath
         
-        let cell = tableView.cellForRow(at: self.selectedMainIndex!) as! MedCell
-        cell.rotateIcon(open: true)
-        self.isCellActive[self.selectedMainIndex!.row] = true
         
-        if let indexP = self.previousSelectedMainIndex{
-            if indexP.row == self.selectedMainIndex!.row {
+        if let cell = tableView.cellForRow(at: self.selectedMainIndex!) as? MedCellWithTable {
+            cell.rotateIcon(open: true)
+            self.isCellActive[self.selectedMainIndex!.row] = true
+            
+            if let indexP = self.previousSelectedMainIndex{
+                if indexP.row == self.selectedMainIndex!.row {
+
+                    if let cell = tableView.cellForRow(at: indexP) as? MedCellWithTable{
+                        cell.rotateIcon(open: false)
+                        self.isCellActive[indexP.row] = false
+                        self.selectedMainIndex        =  nil
+                    }else{
+                        cell.rotateIcon(open: false)
+                        self.isCellActive[indexP.row] = false
+                        self.selectedMainIndex        =  nil
+                    }
+                    
+                }else{
+                    
+                    if let cell = tableView.cellForRow(at: indexP) as? MedCellWithTable {
+                        cell.rotateIcon(open: false)
+                        self.isCellActive[indexP.row] = false
+                    }
+                    if let cell = tableView.cellForRow(at: indexP) as? MedCellWithCollection {
+                        cell.rotateIcon(open: false)
+                        self.isCellActive[indexP.row] = false
+                    }
+                    else{
+                        self.isCellActive[indexP.row] = false
+                    }
+                    
+                }
                 
-                let cell = tableView.cellForRow(at: indexP) as! MedCell
-                cell.rotateIcon(open: false)
-                self.isCellActive[indexP.row] = false
-                
-                self.selectedMainIndex          =  nil
-                self.previousSelectedMainIndex  =  nil
-            }else{
-                
-                if let cell = tableView.cellForRow(at: indexP) as? MedCell {
-                    cell.rotateIcon(open: false)
-                    self.isCellActive[indexP.row] = false
+            }
+        }else{
+            let cell = tableView.cellForRow(at: self.selectedMainIndex!) as! MedCellWithCollection
+            cell.rotateIcon(open: true)
+            self.isCellActive[self.selectedMainIndex!.row] = true
+            
+            if let indexP = self.previousSelectedMainIndex{
+                if indexP.row == self.selectedMainIndex!.row {
+
+                    if let cell = tableView.cellForRow(at: indexP) as? MedCellWithTable{
+                        cell.rotateIcon(open: false)
+                        self.isCellActive[indexP.row] = false
+                        self.selectedMainIndex        =  nil
+                    }else{
+                        cell.rotateIcon(open: false)
+                        self.isCellActive[indexP.row] = false
+                        self.selectedMainIndex        =  nil
+                    }
+                    
+                }else{
+                    
+                    if let cell = tableView.cellForRow(at: indexP) as? MedCellWithTable {
+                        cell.rotateIcon(open: false)
+                        self.isCellActive[indexP.row] = false
+                    }
+                    if let cell = tableView.cellForRow(at: indexP) as? MedCellWithCollection {
+                        cell.rotateIcon(open: false)
+                        self.isCellActive[indexP.row] = false
+                    }
+                    else{
+                        self.isCellActive[indexP.row] = false
+                    }
+                    
                 }
                 
             }

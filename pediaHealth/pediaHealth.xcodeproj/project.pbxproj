@@ -17,7 +17,10 @@
 		074013AE2510581500E7A2ED /* ParseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074013AD2510581500E7A2ED /* ParseErrors.swift */; };
 		07610A4A25198C3200C4CC94 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07610A4925198C3200C4CC94 /* Constants.swift */; };
 		07610A4D25199CE000C4CC94 /* IllCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07610A4C25199CE000C4CC94 /* IllCell.swift */; };
-		07898198251195B00047BAE7 /* MedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07898197251195B00047BAE7 /* MedCell.swift */; };
+		0777A70E2522F20E006BE55F /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0777A70D2522F20E006BE55F /* Button.swift */; };
+		0777A7162522F638006BE55F /* MedCellWithCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0777A7152522F638006BE55F /* MedCellWithCollection.swift */; };
+		0777A7192522F9F3006BE55F /* DoseCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0777A7182522F9F3006BE55F /* DoseCollection.swift */; };
+		07898198251195B00047BAE7 /* MedCellWithTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07898197251195B00047BAE7 /* MedCellWithTable.swift */; };
 		07BD8B1025040FBD008893EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD8B0F25040FBD008893EB /* AppDelegate.swift */; };
 		07BD8B1225040FBD008893EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD8B1125040FBD008893EB /* SceneDelegate.swift */; };
 		07BD8B1425040FBD008893EB /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD8B1325040FBD008893EB /* MainController.swift */; };
@@ -42,7 +45,10 @@
 		074013AD2510581500E7A2ED /* ParseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseErrors.swift; sourceTree = "<group>"; };
 		07610A4925198C3200C4CC94 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		07610A4C25199CE000C4CC94 /* IllCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllCell.swift; sourceTree = "<group>"; };
-		07898197251195B00047BAE7 /* MedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedCell.swift; sourceTree = "<group>"; };
+		0777A70D2522F20E006BE55F /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		0777A7152522F638006BE55F /* MedCellWithCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedCellWithCollection.swift; sourceTree = "<group>"; };
+		0777A7182522F9F3006BE55F /* DoseCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseCollection.swift; sourceTree = "<group>"; };
+		07898197251195B00047BAE7 /* MedCellWithTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedCellWithTable.swift; sourceTree = "<group>"; };
 		07BD8B0C25040FBD008893EB /* pediaHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pediaHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BD8B0F25040FBD008893EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07BD8B1125040FBD008893EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +78,7 @@
 		07247C3A2505D7C300B5DEF6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				07610A4925198C3200C4CC94 /* Constants.swift */,
 				07BD4DE32513FB7F00694B82 /* LocalFile */,
 			);
 			path = Utils;
@@ -93,6 +100,23 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
+		0777A70C2522F198006BE55F /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				0777A70D2522F20E006BE55F /* Button.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		0777A7102522F50E006BE55F /* CellWithCollection */ = {
+			isa = PBXGroup;
+			children = (
+				0777A7152522F638006BE55F /* MedCellWithCollection.swift */,
+				0777A7182522F9F3006BE55F /* DoseCollection.swift */,
+			);
+			path = CellWithCollection;
+			sourceTree = "<group>";
+		};
 		078981952511955E0047BAE7 /* Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,13 +126,13 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
-		07898196251195760047BAE7 /* Cell */ = {
+		07898196251195760047BAE7 /* CellWithTable */ = {
 			isa = PBXGroup;
 			children = (
-				07898197251195B00047BAE7 /* MedCell.swift */,
+				07898197251195B00047BAE7 /* MedCellWithTable.swift */,
 				07610A4C25199CE000C4CC94 /* IllCell.swift */,
 			);
-			path = Cell;
+			path = CellWithTable;
 			sourceTree = "<group>";
 		};
 		07BD4DE32513FB7F00694B82 /* LocalFile */ = {
@@ -187,10 +211,11 @@
 		07BD8B2C2504129A008893EB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0777A7102522F50E006BE55F /* CellWithCollection */,
+				0777A70C2522F198006BE55F /* Button */,
 				073165CE25127875009A4459 /* Card */,
-				07898196251195760047BAE7 /* Cell */,
+				07898196251195760047BAE7 /* CellWithTable */,
 				078981952511955E0047BAE7 /* Header */,
-				07610A4925198C3200C4CC94 /* Constants.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,6 +306,7 @@
 				07610A4D25199CE000C4CC94 /* IllCell.swift in Sources */,
 				07BD8B1425040FBD008893EB /* MainController.swift in Sources */,
 				07BD8B2F250412E4008893EB /* BotomRoundedRectangle.swift in Sources */,
+				0777A70E2522F20E006BE55F /* Button.swift in Sources */,
 				07BD8B1025040FBD008893EB /* AppDelegate.swift in Sources */,
 				07247C3C2505D7E400B5DEF6 /* DataService.swift in Sources */,
 				073165D0251279EA009A4459 /* Card.swift in Sources */,
@@ -289,9 +315,11 @@
 				07BD8B1225040FBD008893EB /* SceneDelegate.swift in Sources */,
 				074013AE2510581500E7A2ED /* ParseErrors.swift in Sources */,
 				07247C402505D9D800B5DEF6 /* Enfermedad.swift in Sources */,
+				0777A7162522F638006BE55F /* MedCellWithCollection.swift in Sources */,
 				07247C422505DD3200B5DEF6 /* Aplicacion.swift in Sources */,
 				07610A4A25198C3200C4CC94 /* Constants.swift in Sources */,
-				07898198251195B00047BAE7 /* MedCell.swift in Sources */,
+				07898198251195B00047BAE7 /* MedCellWithTable.swift in Sources */,
+				0777A7192522F9F3006BE55F /* DoseCollection.swift in Sources */,
 				07247C3E2505D90800B5DEF6 /* Medicina.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,6 +28,15 @@ class IllCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func layoutIfNeeded() {
+        super.layoutIfNeeded()
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+
+    
     func setUpCell(enfermedad: String){
         self.enfermedadText.text = enfermedad
     }

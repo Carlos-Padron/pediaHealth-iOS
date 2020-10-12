@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MedCell: UITableViewCell {
+class MedCellWithTable: UITableViewCell {
     
     
     //Outlets
@@ -21,10 +21,10 @@ class MedCell: UITableViewCell {
     //Variables
     var illness = [Enfermedad]()
     
-    let textTopAnchor: CGFloat               =  12.0
-    let TextBottomAnchor: CGFloat            =  10.0
-    let cardBottomAnchor: CGFloat            =  9.0
-    let cardTopAnchor: CGFloat               =  2.0
+    let textTopAnchor: CGFloat                        =  12.0
+    let TextBottomAnchor: CGFloat                     =  10.0
+    let cardBottomAnchor: CGFloat                     =  9.0
+    let cardTopAnchor: CGFloat                        =  2.0
 
     var mainTableIndex: Int?
     var secondaryCollapsedCellHeight: [Int: CGFloat]  =  [:]
@@ -49,10 +49,7 @@ class MedCell: UITableViewCell {
         
         self.illness = array
         self.mainTableIndex = index
-        
-        let tableHeight:CGFloat = CGFloat((self.illness.count * 48) * 2)
-        
-        self.SecondTable.heightAnchor.constraint(equalToConstant: tableHeight).isActive = true
+
         self.SecondTable.reloadData()
         
     }
@@ -60,26 +57,29 @@ class MedCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+
+    }
+    
+    override func layoutIfNeeded() {
+        super.layoutIfNeeded()
+
     }
     
     func collapsedCellHeight()-> CGFloat{
-        
         let cellTextHeight: CGFloat       =  self.medText.bounds.height
-        let collapsedHeight: CGFloat      =  cellTextHeight          +  self.textTopAnchor      +  self.TextBottomAnchor +                                                                          self.cardBottomAnchor   +  self.cardTopAnchor      +  5
-
+        let collapsedHeight: CGFloat      =  cellTextHeight          +  self.textTopAnchor      +  self.TextBottomAnchor +                                                                            self.cardBottomAnchor   +  self.cardTopAnchor      +  5
+        
         return collapsedHeight
     }
     
     func expandedCellHeight()->CGFloat{
-        
-        
         let cellTextHeight: CGFloat       =  self.medText.bounds.height
         let cellUsageTextHeight: CGFloat  =  self.uso.bounds.height
         let secondTableHeight: CGFloat    =  self.SecondTable.bounds.height
         
-        let expandedHeight: CGFloat       =  cellTextHeight         +  self.textTopAnchor      + self.TextBottomAnchor +                                                                            self.cardBottomAnchor  +  self.cardTopAnchor      + cellUsageTextHeight   +
-                                             10                     +  secondTableHeight
+        //10 es la constante por deault
+        let expandedHeight: CGFloat       =  cellTextHeight         +  self.textTopAnchor      + self.TextBottomAnchor +                                                                              self.cardBottomAnchor  +  self.cardTopAnchor      + cellUsageTextHeight   +
+                                             50           +      secondTableHeight   // +  secondTableHeight
         return expandedHeight
     }
     
@@ -103,7 +103,7 @@ class MedCell: UITableViewCell {
 
 //MARK: - Second TableView Config
 
-extension MedCell: UITableViewDelegate, UITableViewDataSource{
+extension MedCellWithTable: UITableViewDelegate, UITableViewDataSource{
     
     
     func updateSecondTableView(){
