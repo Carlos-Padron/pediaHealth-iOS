@@ -105,14 +105,13 @@ extension MedCellWithCollection: UICollectionViewDataSource, UICollectionViewDel
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //return self.dosesType?.count ?? 0
-        return 1
+        return self.dosesType?.count ?? 0
+        //return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "doseColletion", for: indexPath as IndexPath) as? DoseCollection {
-            
             
                 
             cell.setButtonConfig(doseType: self.dosesType![indexPath.row].metodo , index: indexPath.row)

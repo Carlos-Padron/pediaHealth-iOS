@@ -27,8 +27,12 @@ class MedCellWithTable: UITableViewCell {
     let cardTopAnchor: CGFloat                        =  2.0
 
     var mainTableIndex: Int?
+    
+    var selectedMainIndex: IndexPath?
+    var previousSelectedMainIndex: IndexPath?
     var secondaryCollapsedCellHeight: [Int: CGFloat]  =  [:]
     var secondaryExpandedCellHeight: [Int: CGFloat]   =  [:]
+    var isCellActive: [Int: Bool]                     = [:]
     var cellBool: [Int: Bool]                         =  [:]
      
     
@@ -49,7 +53,10 @@ class MedCellWithTable: UITableViewCell {
         
         self.illness = array
         self.mainTableIndex = index
-
+        
+        //Puede funcionar ?
+        self.isCellActive[index] = false
+        
         self.SecondTable.reloadData()
         
     }
@@ -78,8 +85,7 @@ class MedCellWithTable: UITableViewCell {
         let secondTableHeight: CGFloat    =  self.SecondTable.bounds.height
         
         //10 es la constante por deault
-        let expandedHeight: CGFloat       =  cellTextHeight         +  self.textTopAnchor      + self.TextBottomAnchor +                                                                              self.cardBottomAnchor  +  self.cardTopAnchor      + cellUsageTextHeight   +
-                                             50           +      secondTableHeight   // +  secondTableHeight
+        let expandedHeight: CGFloat       =  cellTextHeight         +  self.textTopAnchor      + self.TextBottomAnchor +                                                                              self.cardBottomAnchor  +  self.cardTopAnchor      + cellUsageTextHeight   +  secondTableHeight   + 45.5
         return expandedHeight
     }
     
@@ -125,13 +131,22 @@ extension MedCellWithTable: UITableViewDelegate, UITableViewDataSource{
         if tableView === self.SecondTable{
             if let cell = tableView.dequeueReusableCell(withIdentifier: "IllName", for: indexPath) as? IllCell {
                 
-                cell.setUpCell(enfermedad: self.illness[indexPath.row].nEnfermedad)
+                cell.setUpCell(enfermedad: self.illness[indexPath.row].nEnfermedad, array: self.illness[indexPath.row].aplicaciones)
                 cell.layoutIfNeeded()
                 cell.layoutSubviews()
                 cell.setNeedsUpdateConstraints()
                 cell.updateConstraintsIfNeeded()
                 
-                self.secondaryCollapsedCellHeight[indexPath.row] = cell.getCellHeight()
+                if  self.isCellActive[indexPath.row] == true {
+                    cell.rotateIcon(open: true)
+                }else{
+                    cell.rotateIcon(open: false)
+                }
+
+
+                
+                self.secondaryCollapsedCellHeight[indexPath.row] = cell.collapsedCellHeight()
+                self.secondaryExpandedCellHeight[indexPath.row] = cell.expandedCellHeight()
                 self.cellBool[indexPath.row]                     =  true
                 return cell
             }
@@ -144,12 +159,59 @@ extension MedCellWithTable: UITableViewDelegate, UITableViewDataSource{
 
         if self.cellBool[indexPath.row] != nil {
             if self.cellBool[indexPath.row]!{
-                
+                if self.isCellActive[indexPath.row] == true {
+                    return self.secondaryExpandedCellHeight[indexPath.row]!
+                }
                 return self.secondaryCollapsedCellHeight[indexPath.row]!
             }
         }
         return 45
 
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.previousSelectedMainIndex = self.selectedMainIndex
+        self.selectedMainIndex  = indexPath
+        
+        let cell = tableView.cellForRow(at: self.selectedMainIndex!) as! IllCell
+        cell.rotateIcon(open: true)
+        self.isCellActive[self.selectedMainIndex!.row] = true
+        
+        if let indexP = self.previousSelectedMainIndex{
+            if indexP.row == self.selectedMainIndex!.row {
+
+                if let cell = tableView.cellForRow(at: indexP) as? MedCellWithTable{
+                    cell.rotateIcon(open: false)
+                    self.isCellActive[indexP.row] = false
+                    self.selectedMainIndex        =  nil
+                }else{
+                    cell.rotateIcon(open: false)
+                    self.isCellActive[indexP.row] = false
+                    self.selectedMainIndex        =  nil
+                }
+                
+            }else{
+                
+                if let cell = tableView.cellForRow(at: indexP) as? MedCellWithTable {
+                    cell.rotateIcon(open: false)
+                    self.isCellActive[indexP.row] = false
+                }
+                if let cell = tableView.cellForRow(at: indexP) as? MedCellWithCollection {
+                    cell.rotateIcon(open: false)
+                    self.isCellActive[indexP.row] = false
+                }
+                else{
+                    self.isCellActive[indexP.row] = false
+                }
+                
+            }
+            
+        }
+        
+        tableView.beginUpdates()
+        tableView.endUpdates()
+        
     }
     
 }

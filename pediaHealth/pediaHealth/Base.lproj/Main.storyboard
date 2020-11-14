@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -24,11 +24,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainController" customModule="pediaHealth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOq-Ui-3Rf" customClass="BotomRoundedRectangle" customModule="pediaHealth" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="157"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encuentra tu dosis correcta" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4b-tE-HD4">
                                         <rect key="frame" x="15" y="33" width="200" height="70"/>
@@ -41,11 +41,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7u9-ZS-NbN">
-                                        <rect key="frame" x="340" y="42" width="20" height="18"/>
+                                        <rect key="frame" x="379" y="41.666666666666671" width="20" height="18"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="51I-IR-EZG" customClass="RoundedTextField" customModule="pediaHealth" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="106" width="345" height="42"/>
+                                        <rect key="frame" x="15" y="106" width="384" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="s89-Mv-Yc0"/>
@@ -71,70 +71,122 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZaQ-og-dfi">
-                                <rect key="frame" x="25" y="182" width="325" height="485"/>
+                                <rect key="frame" x="25" y="182" width="364" height="680"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <prototypes>
-                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedCellWithTable" rowHeight="240" id="9hs-Um-TPy" customClass="MedCellWithTable" customModule="pediaHealth" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="325" height="240"/>
+                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedCellWithTable" rowHeight="350" id="9hs-Um-TPy" customClass="MedCellWithTable" customModule="pediaHealth" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="364" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9hs-Um-TPy" id="UCo-dh-nUl">
-                                            <rect key="frame" x="0.0" y="0.0" width="325" height="240"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="364" height="350"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axV-fN-fpi" userLabel="Card" customClass="Card" customModule="pediaHealth" customModuleProvider="target">
-                                                    <rect key="frame" x="3" y="2" width="319" height="229"/>
+                                                    <rect key="frame" x="3" y="2" width="358" height="339"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KcA-oi-TtO" userLabel="Arrow">
-                                                            <rect key="frame" x="286.5" y="17" width="12.5" height="16.5"/>
+                                                            <rect key="frame" x="325.66666666666669" y="16.666666666666668" width="12.333333333333314" height="16.666666666666661"/>
                                                             <color key="tintColor" name="DarkGrey"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Med" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IT-aQ-G10" userLabel="MedName">
-                                                            <rect key="frame" x="15" y="12" width="251.5" height="26"/>
+                                                            <rect key="frame" x="15" y="12.000000000000002" width="290.66666666666669" height="25.666666666666671"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicamento para el med " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvI-DT-MhY" userLabel="Description">
-                                                            <rect key="frame" x="15" y="48" width="239.5" height="20"/>
+                                                            <rect key="frame" x="15" y="47.666666666666664" width="278.66666666666669" height="19.999999999999993"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pTT-wy-3Oy">
-                                                            <rect key="frame" x="15" y="73" width="284" height="100"/>
+                                                            <rect key="frame" x="15" y="72.666666666666671" width="323" height="100.00000000000001"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="100" id="2Af-6u-HpJ"/>
                                                             </constraints>
                                                             <prototypes>
-                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IllName" rowHeight="98" id="yyf-fO-z6N" customClass="IllCell" customModule="pediaHealth" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="28" width="284" height="98"/>
+                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="IllName" rowHeight="177" id="yyf-fO-z6N" customClass="IllCell" customModule="pediaHealth" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="28" width="323" height="177"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yyf-fO-z6N" id="ihG-2Y-bv6">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="284" height="98"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="323" height="177"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Med" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkj-t8-Nt8" userLabel="MedName">
-                                                                                <rect key="frame" x="10" y="8" width="241.5" height="23.5"/>
+                                                                                <rect key="frame" x="10" y="7.9999999999999982" width="280.66666666666669" height="23.333333333333329"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
                                                                                 <color key="textColor" name="Text"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="F5v-5z-OaG" userLabel="Arrow">
-                                                                                <rect key="frame" x="261.5" y="12" width="12.5" height="16.5"/>
+                                                                                <rect key="frame" x="300.66666666666669" y="11.666666666666666" width="12.333333333333314" height="16.333333333333336"/>
                                                                                 <color key="tintColor" name="DarkGrey"/>
                                                                             </imageView>
+                                                                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="62E-M9-gz9">
+                                                                                <rect key="frame" x="10" y="36.333333333333343" width="303" height="80"/>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="80" id="KFq-pI-mfo"/>
+                                                                                </constraints>
+                                                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rj5-Mo-EJ5">
+                                                                                    <size key="itemSize" width="280" height="64"/>
+                                                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                                </collectionViewFlowLayout>
+                                                                                <cells>
+                                                                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="doseColletion" id="7eM-pw-Zdd" customClass="DoseCollection" customModule="pediaHealth" customModuleProvider="target">
+                                                                                        <rect key="frame" x="0.0" y="8" width="280" height="64"/>
+                                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                        <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="b88-1Z-A2c">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="64"/>
+                                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                            <subviews>
+                                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEI-eo-ph3" customClass="Button" customModule="pediaHealth" customModuleProvider="target">
+                                                                                                    <rect key="frame" x="20" y="8" width="195" height="48"/>
+                                                                                                    <color key="backgroundColor" name="OpaqueBlue"/>
+                                                                                                    <constraints>
+                                                                                                        <constraint firstAttribute="height" constant="48" id="VYT-sM-XPa"/>
+                                                                                                        <constraint firstAttribute="width" constant="195" id="nTD-0b-Kir"/>
+                                                                                                    </constraints>
+                                                                                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
+                                                                                                    <state key="normal" title="Oral">
+                                                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                    </state>
+                                                                                                    <connections>
+                                                                                                        <action selector="buttonPressed:" destination="7eM-pw-Zdd" eventType="touchUpInside" id="hdd-io-iGB"/>
+                                                                                                    </connections>
+                                                                                                </button>
+                                                                                            </subviews>
+                                                                                            <constraints>
+                                                                                                <constraint firstItem="qEI-eo-ph3" firstAttribute="centerY" secondItem="b88-1Z-A2c" secondAttribute="centerY" id="0LQ-Wr-lCn"/>
+                                                                                                <constraint firstItem="qEI-eo-ph3" firstAttribute="leading" secondItem="b88-1Z-A2c" secondAttribute="leading" constant="20" id="tGs-aR-YwP"/>
+                                                                                            </constraints>
+                                                                                        </collectionViewCellContentView>
+                                                                                        <size key="customSize" width="280" height="64"/>
+                                                                                        <connections>
+                                                                                            <outlet property="Button" destination="qEI-eo-ph3" id="gjL-TC-L17"/>
+                                                                                        </connections>
+                                                                                    </collectionViewCell>
+                                                                                </cells>
+                                                                            </collectionView>
                                                                         </subviews>
                                                                         <constraints>
+                                                                            <constraint firstItem="62E-M9-gz9" firstAttribute="leading" secondItem="vkj-t8-Nt8" secondAttribute="leading" id="7dU-35-0wx"/>
                                                                             <constraint firstAttribute="trailing" secondItem="F5v-5z-OaG" secondAttribute="trailing" constant="10" id="HF3-rK-esy"/>
                                                                             <constraint firstItem="F5v-5z-OaG" firstAttribute="leading" secondItem="vkj-t8-Nt8" secondAttribute="trailing" constant="10" id="Led-Rw-leP"/>
                                                                             <constraint firstItem="vkj-t8-Nt8" firstAttribute="leading" secondItem="ihG-2Y-bv6" secondAttribute="leading" constant="10" id="MXB-oQ-gQQ"/>
                                                                             <constraint firstItem="vkj-t8-Nt8" firstAttribute="top" secondItem="ihG-2Y-bv6" secondAttribute="top" constant="8" id="Y0O-Mt-UgA"/>
                                                                             <constraint firstItem="F5v-5z-OaG" firstAttribute="centerY" secondItem="vkj-t8-Nt8" secondAttribute="centerY" id="bTz-Vu-AOb"/>
+                                                                            <constraint firstItem="62E-M9-gz9" firstAttribute="trailing" secondItem="F5v-5z-OaG" secondAttribute="trailing" id="l8e-qI-N7S"/>
+                                                                            <constraint firstItem="62E-M9-gz9" firstAttribute="top" secondItem="vkj-t8-Nt8" secondAttribute="bottom" constant="5" id="uWd-x8-hFD"/>
                                                                         </constraints>
                                                                     </tableViewCellContentView>
                                                                     <connections>
                                                                         <outlet property="arrowIcon" destination="F5v-5z-OaG" id="Xka-z7-dU3"/>
+                                                                        <outlet property="collectionView" destination="62E-M9-gz9" id="ej2-uX-baN"/>
                                                                         <outlet property="enfermedadText" destination="vkj-t8-Nt8" id="7RK-Ad-4C8"/>
                                                                     </connections>
                                                                 </tableViewCell>
@@ -176,33 +228,33 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedCellWithCollection" rowHeight="200" id="xTe-UP-C3c" userLabel="MedCellWithCollection" customClass="MedCellWithCollection" customModule="pediaHealth" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="268" width="325" height="200"/>
+                                        <rect key="frame" x="0.0" y="378" width="364" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xTe-UP-C3c" id="zDd-BA-6FX">
-                                            <rect key="frame" x="0.0" y="0.0" width="325" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="364" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MCb-aa-4Y5" userLabel="Card" customClass="Card" customModule="pediaHealth" customModuleProvider="target">
-                                                    <rect key="frame" x="3" y="2" width="319" height="189"/>
+                                                    <rect key="frame" x="3" y="2" width="358" height="189"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PYA-RL-B60" userLabel="Arrow">
-                                                            <rect key="frame" x="286.5" y="17" width="12.5" height="16.5"/>
+                                                            <rect key="frame" x="325.66666666666669" y="16.666666666666668" width="12.333333333333314" height="16.666666666666661"/>
                                                             <color key="tintColor" name="DarkGrey"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Med" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aq-Tz-jHO" userLabel="MedName">
-                                                            <rect key="frame" x="15" y="12" width="251.5" height="26"/>
+                                                            <rect key="frame" x="15" y="12.000000000000002" width="290.66666666666669" height="25.666666666666671"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicamento para el med " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rex-gV-NO9" userLabel="Description">
-                                                            <rect key="frame" x="15" y="48" width="239.5" height="20"/>
+                                                            <rect key="frame" x="15" y="47.666666666666664" width="278.66666666666669" height="19.999999999999993"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Eeo-rH-rkg">
-                                                            <rect key="frame" x="15" y="73" width="284" height="80"/>
+                                                            <rect key="frame" x="15" y="72.666666666666671" width="323" height="80.000000000000014"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="80" id="nCs-Ke-heB"/>
@@ -305,12 +357,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128.80000000000001" y="112.89355322338831"/>
+            <point key="canvasLocation" x="127.53623188405798" y="112.5"/>
         </scene>
     </scenes>
     <designables>
         <designable name="51I-IR-EZG">
-            <size key="intrinsicContentSize" width="49" height="18.5"/>
+            <size key="intrinsicContentSize" width="49" height="18.666666666666668"/>
         </designable>
     </designables>
     <resources>
